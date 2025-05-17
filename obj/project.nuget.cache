@@ -1,8 +1,44 @@
 {
   "version": 2,
-  "dgSpecHash": "ijX1inrEyH0=",
+  "dgSpecHash": "uSUMz7+shqo=",
   "success": true,
   "projectFilePath": "C:\\Users\\MyPC\\Documents\\Natalia\\NET\\intento2TallerBlazorNat\\TallerNatBlazorApp\\TallerNatBlazorApp.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\MyPC\\.nuget\\packages\\blazored.sessionstorage\\2.4.0\\blazored.sessionstorage.2.4.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.1\\microsoft.aspnetcore.authorization.7.0.1.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.1\\microsoft.aspnetcore.components.7.0.1.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.1\\microsoft.aspnetcore.components.analyzers.7.0.1.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\7.0.1\\microsoft.aspnetcore.components.forms.7.0.1.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.aspnetcore.components.web\\7.0.1\\microsoft.aspnetcore.components.web.7.0.1.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.1\\microsoft.aspnetcore.metadata.7.0.1.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.bcl.memory\\9.0.0\\microsoft.bcl.memory.9.0.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.9.0\\microsoft.identitymodel.abstractions.8.9.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.9.0\\microsoft.identitymodel.jsonwebtokens.8.9.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.identitymodel.logging\\8.9.0\\microsoft.identitymodel.logging.8.9.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.identitymodel.protocols\\7.0.3\\microsoft.identitymodel.protocols.7.0.3.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\7.0.3\\microsoft.identitymodel.protocols.openidconnect.7.0.3.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.9.0\\microsoft.identitymodel.tokens.8.9.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\microsoft.jsinterop\\7.0.1\\microsoft.jsinterop.7.0.1.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.9.0\\system.identitymodel.tokens.jwt.8.9.0.nupkg.sha512",
+    "C:\\Users\\MyPC\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Newtonsoft.Json\" 12.0.1 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

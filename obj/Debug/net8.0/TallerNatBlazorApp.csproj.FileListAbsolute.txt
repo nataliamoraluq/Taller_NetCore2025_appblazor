@@ -1,0 +1,7 @@
+C:\Users\MyPC\Documents\Natalia\NET\intento2TallerBlazorNat\TallerNatBlazorApp\obj\Debug\net8.0\TallerNatBlazorApp.csproj.AssemblyReference.cache
+C:\Users\MyPC\Documents\Natalia\NET\intento2TallerBlazorNat\TallerNatBlazorApp\obj\Debug\net8.0\TallerNatBlazorApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MyPC\Documents\Natalia\NET\intento2TallerBlazorNat\TallerNatBlazorApp\obj\Debug\net8.0\TallerNatBlazorApp.AssemblyInfoInputs.cache
+C:\Users\MyPC\Documents\Natalia\NET\intento2TallerBlazorNat\TallerNatBlazorApp\obj\Debug\net8.0\TallerNatBlazorApp.AssemblyInfo.cs
+C:\Users\MyPC\Documents\Natalia\NET\intento2TallerBlazorNat\TallerNatBlazorApp\obj\Debug\net8.0\TallerNatBlazorApp.csproj.CoreCompileInputs.cache
+C:\Users\MyPC\Documents\Natalia\NET\intento2TallerBlazorNat\TallerNatBlazorApp\obj\Debug\net8.0\TallerNatBlazorApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\MyPC\Documents\Natalia\NET\intento2TallerBlazorNat\TallerNatBlazorApp\obj\Debug\net8.0\TallerNatBlazorApp.sourcelink.json

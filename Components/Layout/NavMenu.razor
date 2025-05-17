@@ -1,6 +1,15 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@inject NavigationManager NavigationManager
+@inject TokenContainer tokenContainer
+
+<!-- 
+Para el logout: 
+un met del stateContainer q limpie
+el token, y llame a la func apropiada para quitar el edo. de autenticacion de la app
+*-->
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">TallerNatBlazorApp</a>
+        <a class="navbar-brand" href="">Taller de ASP Net Core</a>
     </div>
 </div>
 
@@ -8,23 +17,39 @@
 
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
     <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
+        <Microsoft.AspNetCore.Components.Authorization.AuthorizeView>
+            <NotAuthorized>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.Prefix">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="auth/login">
+                        <span class="oi oi-account-login" aria-hidden="true"></span> Iniciar Sesión
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="user">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Crear Usuario
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <button class="nav-link">
+                        <!-- @onclick=logOut -->
+                        <span class="bi bi-arrow-bar-left" aria-hidden="true"></span> Cerrar Sesión
+                    </button>
+                </div>
+            </NotAuthorized>
+            <Authorized>
+                <NavLink class="nav-link" href="">
+                    <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Consultar Usuario
+                </NavLink>
+                <NavLink class="nav-link" href="">
+                    <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Actualizar Usuario
+                </NavLink>
+            </Authorized>
+        </Microsoft.AspNetCore.Components.Authorization.AuthorizeView>
     </nav>
 </div>
 

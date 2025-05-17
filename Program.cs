@@ -1,10 +1,28 @@
+using TallerNatBlazorApp;
 using TallerNatBlazorApp.Components;
+using TallerNatBlazorApp.Data;
+using TallerNatBlazorApp.Data.Auth;
+using TallerNatBlazorApp.Data.Services;
+using Blazored.SessionStorage;
+using Microsoft.AspNetCore.Components.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+// Servicios de Blazor
+builder.Services.AddRazorComponents().AddInteractiveServerComponents();
+builder.Services.AddServerSideBlazor().AddCircuitOptions(options => options.DetailedErrors = true);
+builder.Services.AddAuthorizationCore();
+
+// Servicios personalizados
+builder.Services.AddSingleton<StateContainer>();
+builder.Services.AddSingleton<TokenContainer>();
+builder.Services.AddSingleton<AuthService>();
+builder.Services.AddSingleton<PersonajeService>();
+builder.Services.AddSingleton<Consumer>();
+//builder.Services.AddBlazoredSessionStorage();
+
+// Registro de AuthenticationStateProvider personalizado
+builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 
 var app = builder.Build();
 
@@ -21,6 +39,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
+//enrutamiento
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
