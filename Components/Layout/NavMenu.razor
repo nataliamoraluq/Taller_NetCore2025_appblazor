@@ -26,28 +26,36 @@ el token, y llame a la func apropiada para quitar el edo. de autenticacion de la
                 </div>
                 <div class="nav-item px-3">
                     <NavLink class="nav-link" href="auth/login">
-                        <span class="oi oi-account-login" aria-hidden="true"></span> Iniciar Sesión
+                        <span class="bi bi-arrow-right-circle" aria-hidden="true"></span> Iniciar Sesión
+                        <!-- 
+                        para el logout
+                        class="bi bi-arrow-left-circle"
+                        -->
                     </NavLink>
                 </div>
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="user">
-                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Crear Usuario
+                    <NavLink class="nav-link" href="register">
+                        <span class="bi bi-person" aria-hidden="true"></span> Crear Usuario
                     </NavLink>
                 </div>
-                <div class="nav-item px-3">
+                <!--<div class="nav-item px-3">
                     <button class="nav-link">
-                        <!-- @onclick=logOut -->
                         <span class="bi bi-arrow-bar-left" aria-hidden="true"></span> Cerrar Sesión
                     </button>
+                </div>-->
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="update-user">
+                        <span class="bi bi-person-plus" aria-hidden="true"></span> Actualizar 
+                    </NavLink>
                 </div>
             </NotAuthorized>
             <Authorized>
-                <NavLink class="nav-link" href="">
+                <!--<NavLink class="nav-link" href="">
                     <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Consultar Usuario
-                </NavLink>
-                <NavLink class="nav-link" href="">
+                </NavLink>-->
+                <!--<NavLink class="nav-link" href="update-user">
                     <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Actualizar Usuario
-                </NavLink>
+                </NavLink>-->
             </Authorized>
         </Microsoft.AspNetCore.Components.Authorization.AuthorizeView>
     </nav>

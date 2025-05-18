@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\MyPC\\Documents\\Natalia\\NET\\intento2TallerBlazorNat\\TallerNatBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TallerNatBlazorApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TallerNatBlazorApp.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\MyPC\\Documents\\Natalia\\NET\\intento2TallerBlazorNat\\TallerNatBlazorApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\MyPC\\Documents\\Natalia\\NET\\intento2TallerBlazorNat\\TallerNatBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MyPC\\Documents\\Natalia\\NET\\intento2TallerBlazorNat\\TallerNatBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MyPC\\Documents\\Natalia\\NET\\intento2TallerBlazorNat\\TallerNatBlazorApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TallerNatBlazorApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TallerNatBlazorApp.props",
+      "PackagePath": "build\\TallerNatBlazorApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TallerNatBlazorApp.props",
+      "PackagePath": "buildMultiTargeting\\TallerNatBlazorApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TallerNatBlazorApp.props",
+      "PackagePath": "buildTransitive\\TallerNatBlazorApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

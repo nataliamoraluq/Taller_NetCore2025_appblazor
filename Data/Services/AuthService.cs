@@ -1,5 +1,5 @@
 using Core.Entities;
-using Data.Models;
+using TallerNatBlazorApp.Data.Models;
 
 namespace TallerNatBlazorApp.Data.Services
 {
@@ -11,6 +11,7 @@ namespace TallerNatBlazorApp.Data.Services
         //
         public async Task<Response<string>> Login(UserDTO usuario)
         {
+            //string --> por el token q devuelve
             //public async Task<Response<User>> Login(User usuario)
             //User pq el task en services y controller (api) son User
             Response<string> response = new Response<string>();
@@ -19,6 +20,7 @@ namespace TallerNatBlazorApp.Data.Services
                 response = await
                     Consumer.Execute<string, UserDTO>(
                         $"{url}/auth/login",
+                        //auth
                         //$"{url}/Login",
                         methodHttp.POST,
                         usuario)
@@ -60,25 +62,22 @@ namespace TallerNatBlazorApp.Data.Services
             return response;
         }
 
-
-        /*public async Task<Response<User>> Register(User user)
+        public async Task<Response<User>> UpdateUser(UserDTO updatedUser, string token)
         {
-            //string UserName, string Password
-            //public async Task<Response<string>> Register(User usuario)
-            //bool pq el task en services y controller (api) es bool
-            Response<string> response = new Response<string>();
+            Response<User> response = new Response<User>();
+
             try
             {
-                response = await
-                    Consumer.Execute<string, User>(
-                        $"{url}",
-                        //$"{url}/",
-                        //!* detalle aqui: en la api -> api/User so if $"{url} = User es solo url o url/ ?
-                        //if aint working, colocarle a la api /User/user/ if
-                        methodHttp.POST,
-                        usuario)
-                    ;
-                //return response;
+                response = (await
+                    Consumer
+                    .Execute<User, UserDTO>(
+                        url,
+                        methodHttp.PUT,
+                        updatedUser,
+                        token)
+                    );
+
+                return response;
             }
             catch (Exception ex)
             {
@@ -86,6 +85,7 @@ namespace TallerNatBlazorApp.Data.Services
             }
             return response;
         }
-        */
+        //
+        //
     }
 }

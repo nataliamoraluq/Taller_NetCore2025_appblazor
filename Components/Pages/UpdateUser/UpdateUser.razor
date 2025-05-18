@@ -1,0 +1,40 @@
+@page "/update-user"
+@using Core.Entities
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+@using Microsoft.AspNetCore.Components.Authorization
+
+<!--<CascadingAuthenticationState>
+    <AuthorizeView>
+        <Authorized>-->
+            <h3>Actualizar Usuario</h3>
+
+            <EditForm Model="@user" Context="context2"> 
+                <DataAnnotationsValidator/>
+                <div class="form-group d-flex flex-column">
+                    <label>
+                        <span>Username</span>
+                        <InputText class="form-control" @bind-Value="user.UserName" />
+                        <ValidationMessage For="() => user.UserName" class="alert alert-danger" />
+                    </label>
+                    <label>
+                        <span>Old Password</span>
+                        <InputText class="form-control" @bind-Value="user.Password" />
+                        <ValidationMessage For="() => user.Password" class="alert alert-danger" />
+                    </label>
+                </div>
+            </EditForm> 
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button class="btn btn-secondary" @onclick=Update>Actualizar</button>
+                <button class="btn btn-secondary" @onclick=Clean>Limpiar</button>
+                <!--<button class="btn btn-secondary" @onclick=Logout>Cerrar Sesion</button> -->
+            </div>
+            <div class="@tipoMessage" role="alert">
+                <h4>@mensaje</h4>
+            </div>
+        <!--</Authorized>
+        <NotAuthorized>
+            <p>No estás autorizado!</p>
+        </NotAuthorized>
+    </AuthorizeView>
+</CascadingAuthenticationState> -->

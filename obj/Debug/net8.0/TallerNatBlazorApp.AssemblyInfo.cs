@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TallerNatBlazorApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eebed95e58f389855fe82407307bdbf810a9727f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99110970f1059e0d974f6693fadb91cb187a1f6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TallerNatBlazorApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TallerNatBlazorApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

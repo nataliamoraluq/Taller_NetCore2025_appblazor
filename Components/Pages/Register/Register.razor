@@ -1,0 +1,37 @@
+@page "/register"
+@using Core.Entities
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+@using Microsoft.AspNetCore.Components.Authorization
+
+<h3>Crear un nuevo usuario (Register):</h3>
+
+<p>llena los datos para crear el usuario aqui</p>
+
+<EditForm Model="@user"> 
+    <DataAnnotationsValidator/>
+    <div class="form-group d-flex flex-column">
+        <label>
+            <span>Username</span>
+            <InputText class="form-control" @bind-Value="user.UserName" />
+            <!-- placeholder="Nombre de usuario" -->
+            <ValidationMessage For="() => user.UserName" class="alert alert-danger" />
+        </label>
+        <label>
+            <span>Password</span>
+            <InputText class="form-control" @bind-Value="user.Password" placeholder="Password"/>
+            <ValidationMessage For="() => user.Password" class="alert alert-danger" />
+        </label>
+    </div>
+    @* <ValidationSummary></ValidationSummary> *@
+
+</EditForm> 
+
+<div class="btn-group" role="group" aria-label="Basic example">
+    <button class="btn btn-secondary" @onclick=RegisterUser>Registrarse</button>
+    <button class="btn btn-secondary" @onclick=Clean>Limpiar</button>
+</div>
+
+<div class="@tipoMessage" role="alert">
+    <h4>@mensaje</h4>
+</div>

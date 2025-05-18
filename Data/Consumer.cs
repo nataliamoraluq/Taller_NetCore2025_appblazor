@@ -40,7 +40,7 @@ namespace TallerNatBlazorApp.Data
             //string urlBaseApi = "http://gracosoftnet2025.runasp.net/api/";
             //string urlBaseApi = "https://localhost:7215/api/";
             //
-            string urlBaseApi = "http://localhost:5025";
+            string urlBaseApi = "http://localhost:5025/";
             //
             //ojito aqui, con usar el local q es al correr la api
             //
@@ -65,9 +65,9 @@ namespace TallerNatBlazorApp.Data
                         Content = methodHttp != methodHttp.GET ? methodHttp != methodHttp.DELETE ? byteContent : null : null
                     }; 
                     //request.Content = byteContent;
-                    if(token!=null){
+                        if(token!=null)
                         //
-                        client.DefaultRequestHeaders.Authorization =  new AuthenticationHeaderValue("Bearer", token);
+                            client.DefaultRequestHeaders.Authorization =  new AuthenticationHeaderValue("Bearer", token);
                         //
                         using(HttpResponseMessage responseApi = await client.SendAsync(request))
                         {
@@ -95,10 +95,8 @@ namespace TallerNatBlazorApp.Data
                             }
 
                         };
-                    }
+                    
                 }
-
-
 
             }
             catch(Exception ex)
@@ -113,7 +111,7 @@ namespace TallerNatBlazorApp.Data
             //string urlBaseApi = "http://gracosoftnet2025.runasp.net/api/";
             //string urlBaseApi = "https://localhost:7215/api/";
             //
-            string urlBaseApi = "http://localhost:5025";
+            string urlBaseApi = "http://localhost:5025/";
             //
             //ojito aqui, con usar el local q es al correr la api
             //

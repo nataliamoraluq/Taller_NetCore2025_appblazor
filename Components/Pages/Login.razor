@@ -26,8 +26,8 @@
         </label>
         <label>
             <span>Contraseña</span>
-            <input type="password" @bind="authRequest!.Password" class="form-control" id="password" placeholder="Password">
-            <ValidationMessage For="() => authRequest!.UserName" class="alert alert-danger" />
+            <input type="password" @bind="authRequest!.Password" class="form-control" placeholder="Password">
+            <ValidationMessage For="() => authRequest!.Password" class="alert alert-danger" />
         </label>
         <!-- agg aqui los mensajitos con colores del entregable anterior!!!-->
     </div>
@@ -36,27 +36,9 @@
     <div>@mensaje</div>
 </EditForm>
 
-@*
-@code {
-    private User? authRequest = new User();
-    //private UserDTO? authRequest = new User();
-    public async void HandleValidSubmit()
-    {
-        var authResponse = await AuthService.Login(authRequest!);
-        if (authResponse != null && authResponse.Ok)
-        {
-            tokenContainer.AsignarToken(authResponse.Message);
-            //await SessionStorage.SetItemAsync("token", authResponse.Message);
-            //token llega aqui cm respuesta de la api al llamar al Login!
-            ((CustomAuthenticationStateProvider)AuthenticationStateProvider).AuthenticateUser(authResponse.Message);
-            NavigationManager.NavigateTo("/");
-        }
-    }
-}*@
-
 @code {
     private UserDTO? authRequest = new UserDTO();
-    private string claseMensaje { get; set; } = string.Empty;
+    private string tipoMessage { get; set; } = string.Empty;
     private string mensaje { get; set; } = string.Empty;
     public async void HandleValidSubmit()
     {
@@ -64,16 +46,20 @@
         var authResponse = await AuthService.Login(authRequest!);
         if (authResponse != null && authResponse.Ok)
         {
-            tokenContainer.AsignarToken(authResponse.Message);
             //await SessionStorage.SetItemAsync("token", authResponse.Message);
+            //token llega aqui cm respuesta de la api al llamar al Login!
+            tokenContainer.AsignarToken(authResponse.Message);
             ((CustomAuthenticationStateProvider)AuthenticationStateProvider).AuthenticateUser(authResponse.Message);
             NavigationManager.NavigateTo("/");
         }
         else
         {
-            mensaje = "Error! nombre de usuario o contraseña incorrecta";
-            claseMensaje = "alert alert-danger";
+            mensaje = "Error!! nombre de usuario o contraseña incorrecta! Verifica";
+            //mensaje = $"{authRequest.UserName} {authRequest.Password}";
+            tipoMessage = "alert alert-danger";
             StateHasChanged();
         }
     }
+    //
+
 }

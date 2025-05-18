@@ -4,16 +4,16 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TallerNatBlazorApp.Data.Models.Data.Models
+namespace TallerNatBlazorApp.Data.Models
 {
     public class UserDTO 
     {
         public int id { get; set; }
         [Required(ErrorMessage = "Debes ingresar un username")]
-        [StringLength(250, ErrorMessage = "El user name no cumple con la min. longitud", MinimumLength = 4 )]
+        [StringLength(250, ErrorMessage = "El user name no cumple con la min. longitud", MinimumLength = 2 )]
         public string  UserName { get; set; } = string.Empty;
         [Required(ErrorMessage = "Debes ingresar una contraseña")]
-        [StringLength(250, ErrorMessage = "La contraseña no cumple con la min. longitud", MinimumLength = 4 )]
+        [StringLength(250, ErrorMessage = "La contraseña no cumple con la min. longitud", MinimumLength = 2 )]
         public string Password { get; set; } = string.Empty;
     }
 }

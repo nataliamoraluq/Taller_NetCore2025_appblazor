@@ -14,10 +14,10 @@ builder.Services.AddServerSideBlazor().AddCircuitOptions(options => options.Deta
 builder.Services.AddAuthorizationCore();
 
 // Servicios personalizados
-builder.Services.AddSingleton<StateContainer>();
+//builder.Services.AddSingleton<StateContainer>();
 builder.Services.AddSingleton<TokenContainer>();
 builder.Services.AddSingleton<AuthService>();
-builder.Services.AddSingleton<PersonajeService>();
+//builder.Services.AddSingleton<PersonajeService>();
 builder.Services.AddSingleton<Consumer>();
 //builder.Services.AddBlazoredSessionStorage();
 
